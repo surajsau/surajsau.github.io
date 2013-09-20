@@ -12,6 +12,7 @@
 }
 
 #lbCenter, #lbBottomContainer {
+	background-color: #ffe063;
 	position: absolute;
 	z-index: 9999;
 	overflow: hidden;
@@ -19,7 +20,7 @@
 }
 
 .lbLoading {
-	background: #fff url(../images/workpage/loading.gif) no-repeat center;
+	background: #fff url(./images/workpage/loading.gif) no-repeat center;
 }
 
 #lbImage {
@@ -43,7 +44,7 @@
 }
 
 #lbPrevLink:hover {
-	background: transparent url(../images/workpage/prevlabel.png) no-repeat 0 15%;
+	background: transparent url(./images/workpage/prevlabel.png) no-repeat 0 15%;
 }
 
 #lbNextLink {
@@ -51,26 +52,27 @@
 }
 
 #lbNextLink:hover {
-	background: transparent url(../images/workpage/nextlabel.png) no-repeat 100% 15%;
+	background: transparent url(./images/workpage/nextlabel.png) no-repeat 100% 15%;
 }
 
 #lbBottom {
-	font-family: 'Quicksand',sans-serif;
-	font-size: 1em;
-	color: #000;
-	text-align: left;
-	font-weight: bold;
-	line-height: 1.4em;
-	border-top-style: none;
 	background-color: #ffe063;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 10px;
+	color: #111;
+	font-size: 1em;
+	line-height: 1.4em;
+	text-align: left;
+	border: 2px solid #fff;
+	border-top-style: none;
 }
 
 #lbCloseLink {
 	display: block;
 	float: right;
-	width: 15px;
-	height: 15px;
-	background: transparent url(../images/workpage/closelabel.png) no-repeat center;
+	width: 66px;
+	height: 22px;
+	background: transparent url(./images/workpage/closelabel.png) no-repeat center;
 	margin: 5px 0;
 	outline: none;
 }
@@ -80,7 +82,5 @@
 }
 
 #lbCaption {
-	font-family: 'Quicksand',sans-serif;
 	font-weight: bold;
-	font-size: 1em;
 }
