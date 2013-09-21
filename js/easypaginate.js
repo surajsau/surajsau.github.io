@@ -75,7 +75,7 @@
 								
 				if((count/step) > pages) pages++;
 				
-				var ol = $('<ol id="'+ options.controls +'" style="position:relative; float:left; margin-top:3.5%;"></ol>').insertAfter(obj);
+				var ol = $('<ol id="'+ options.controls +'" style="position:relative; float:left; margin-top:3%;"></ol>').insertAfter(obj);
 				
 				if(options.nextprev){
 					prev = $('<li class="prev"></li>')

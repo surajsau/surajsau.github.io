@@ -1,0 +1,136 @@
+#wrapper{
+	margin-right:auto;
+	margin-left: auto;
+
+}
+
+html{
+	background: url(../Images/startpage/roby.png) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+/*-----------------------Style of Hyperlinks---------------------------------*/
+a:link{text-decoration: none;}
+a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+a:active{text-decoration: none;}
+/*---------------------------------------------------------------------------*/
+
+/*-----------------------Navigation Bar--------------------------------------*/
+#navbar{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.4em;
+	overflow: hidden;
+	margin: 0;
+	padding-left: 0;
+	padding-right: 0;
+	position: relative;
+	float: right;
+	height: auto;
+	width: 52%;
+	/*left: 40%;*/
+}
+
+#navlist{
+	color: #000000;
+	position: relative;
+	float: left;   
+	text-decoration: none;
+	width: 100%;
+}
+
+#navlist ul li{
+	float: left;
+	list-style-type: none;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+#navlist ul li a{
+	color: #000;
+	text-align: center;
+}
+#navlist ul li {color: #000000;}
+
+#navlist ul li a:hover{
+	color:#ffe063;
+	/*font-weight: 600; */
+}
+
+#logo #top-logo{
+	transition: all 0.22s ease-in 0s;
+	-o-transition: all 0.22s ease-in 0s;
+	-moz-transition: all 0.22s ease-in 0s;
+	-webkit-transition: all 0.52s ease-in 0s;
+	opacity: 0;
+}
+
+#logo #bot-logo{
+	transition: all 0.22s ease-out 0s;
+	-o-transition: all 0.22s ease-out 0s;
+	-moz-transition: all 0.22s ease-out 0s;
+	-webkit-transition: all 0.52s ease-out 0s;
+	opacity: 0;
+}
+
+#logo #top-logo:hover{
+	transition: all 0.22s ease-out 0s;
+	-o-transition: all 0.22s ease-out 0s;
+	-moz-transition: all 0.06s ease-out 0s;
+	-webkit-transition: all 0.18s ease-out 0s;
+	opacity: 0;
+}
+
+#logo #bot-logo:hover{
+	transition: all 0.22s ease-in 0s;
+	-o-transition: all 0.22s ease-in 0s;
+	-moz-transition: all 0.06s ease-in 0s;
+	-webkit-transition: all 0.18s ease-in 0s;
+	opacity: 1;
+}
+/*---------------------------------------------------------------------------*/
+
+/*--------------------------------Content-------------------------------------*/
+#content{
+	position: relative;
+	font-size: 10em;
+	height: auto;
+	font-weight: 650;
+	float: right;
+	right: 1%;
+	margin-top: 10%;
+	width: 50%;
+}
+
+#content #hi{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1.1em;
+	float: right;
+	margin-right: 15%;
+	margin-bottom: -4%;
+}
+
+#content #line {
+	float: right;
+	clear: left;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 0.41em;
+	font-weight: normal;
+	margin-bottom: 0;
+	margin-right: 15%;
+	margin-top: 0;
+	letter-spacing: -2px;
+}
+
+#content #line #l1 #me a{color:#000000;}
+#content #line #l1 #me a:hover{color:#ffe063;}
+p{margin:0;}
+
+/*----------------------------------------------------------------------------*/
