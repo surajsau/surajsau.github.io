@@ -334,9 +334,8 @@ ol#pagination li.prev{
 	float: left;
 	margin-left: 5%;
 	margin-right: 2%;
-	height: 200px; /* Height should be auto here. It's changed here just for name sake*/
-	background-color: #555;
-	margin-top: 
+	margin-top: 3%;
+	height: 150px; /* Height should be auto here. It's changed here just for name sake*/
 }
 
 #content #about #descrip{
