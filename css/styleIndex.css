@@ -5,7 +5,11 @@
 }
 
 html{
+<<<<<<< HEAD
 	background: url(../images/startpage/roby.png) no-repeat center center fixed;
+=======
+	background: url(../images/startpage/roby.png) no-repeat center center fixed; 
+>>>>>>> 13484b09eefbb86eadd73d6e56e3366100c91e96
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
