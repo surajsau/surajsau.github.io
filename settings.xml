@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings
+
+nameText="Suraj Sau"
+taglineText="illustrations + designs + momos"
+mainText="COMING BACK SOON."
+
+useOwnLogo="false"
+logoFilePath="logo.png"
+
+nameColor="0xffffff"
+taglineColor="0xffffff"
+mainColor="0xffffff"
+linkColor="0xffffff"
+linkRollOverColor="0xff4400"
+linkRollOverBlurAmount="5"
+
+backgroundColor="0x000000"
+backgroundGradientColor1="0xff4400"
+backgroundGradientColor2="0x000000"
+backgroundGradientAlphaPercent="40"
+
+borderColor="0xffffff"
+borderThickness="10"
+
+ownLogoXOffset="3"
+taglineXOffset="2"
+taglineYOffset="-9"
+mainXOffset="-2"
+linkXOffset="2"
+
+introBlurAmount="20"
+siteRotation="0"
+
+>
+
+<link text="i@surajsau.in" url="mailto:hello@warmforestflash.com" />
+<link text="FACEBOOK/ thesilentcreator" url="http://www.facebook.com/thesilentcreator" target="_blank" />
+<link text="BEHANCE/ demiourgos" url="https://www.behance.net/demiourgos" target="_blank" />
+<link text="TWITTER @surajkumarsau" url="https://twitter.com/surajkumarsau" target="_blank" />
+	
+</settings>
