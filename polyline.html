@@ -1,60 +1,66 @@
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="./css/polyline.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link type="text/css" href="./polyline.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./polyline.js"></script>
   </head>
   <body>
-    <table>
-      <tr>
-        <td>Encoded String</td>
-        <td><input type="text" id="input_encoded"/></td>
-      </tr>
-      <tr>
-        <td>Decoded String</td>
-        <td id="decoded_result"></td>
-      </tr>
-    </table>
-    <button onclick="decode()" class="pure-material-button-contained">Decode</button>
-      <script>
-        function decode(){
-          // array that holds the points
-          encoded = document.getElementById('input_encoded').value;
-          console.log(encoded);
-          var points=[]
-          var index = 0, len = encoded.length;
-          var lat = 0, lng = 0;
-          while (index < len) {
-              var b, shift = 0, result = 0;
-              do {
-                b = encoded.charAt(index++).charCodeAt(0) - 63;//finds ascii                                                                                    //and substract it by 63
-                result |= (b & 0x1f) << shift;
-                shift += 5;
-               } while (b >= 0x20);
+    <!-- <div class="container"> -->
+    <div class="vertical_center">
+      <div class="row">
+        <h1>Polyline Algorithm* Decoding</h1>
+      </div>
+    <div class="row">
+      <div class="col-2">
+        <input class="form-control" type="text" id="input_encoded" placeholder="encoded string"/>
+      </div>
+      <div class="col-3">
+        <button onclick="decodeInput()" class="pure-material-button-contained">decode</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 vertical-scroll">
+        <table id="decoded_result">
 
-              var dlat = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
-              lat += dlat;
-              shift = 0;
-              result = 0;
-              do {
-                b = encoded.charAt(index++).charCodeAt(0) - 63;
-                result |= (b & 0x1f) << shift;
-                shift += 5;
-              } while (b >= 0x20);
-              var dlng = ((result & 1) != 0 ? ~(result >> 1) : (result >> 1));
-              lng += dlng;
-
-           points.push({lat:lat,lng:lng})
-          }
-
-          var decoded_string = "";
-          for (i=0; i<points.length; i++) {
-            decoded_string += "(" + points[i]['lat'] + ":" + points[i]['lng'] + ")";
-            if(i != points.length - 1)
-              decoded_string += ", ";
-          }
-          document.getElementById('decoded_result').innerHTML = decoded_string;
-          return points
-        }
-      </script>
+        </table>
+      </div>
+      <div class="col-3">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        *<a href="https://developers.google.com/maps/documentation/utilities/polylinealgorithm"
+            target="_blank">
+          Encoded Polyline Algorithm Format
+        </a> used in Google Maps APIs & SDKs
+      </div>
+    </div>
+  </div>
   </body>
+  <script>
+    function decodeInput() {
+      var encoded_str = document.getElementById('input_encoded').value;
+      var points = decode(encoded_str);
+
+      $("#decoded_result > tr").remove();
+      drawTable(points)
+
+      // document.getElementById('decoded_result').innerHTML = decoded_str;
+    }
+
+    function drawTable(data) {
+        for (var i = 0; i < data.length; i++) {
+            drawRow(data[i]);
+        }
+    }
+
+    function drawRow(rowData) {
+        var row = $("<tr />")
+        $("#decoded_result").append(row); //this will append tr element to table... keep its reference for a while since we will add cels into it
+        row.append($("<td>" + rowData.val_1 + "</td>"));
+        row.append($("<td>" + rowData.val_2 + "</td>"));
+    }
+
+  </script>
 </html>
